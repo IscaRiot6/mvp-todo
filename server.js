@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
+const todos = require('./routes/api/todos')
+
 const app = express()
 
 //body-parser moddleware
@@ -16,6 +18,9 @@ mongoose
   .connect(db)
   .then(() => console.log('mongoDB is connected'))
   .catch(err => console.log(err))
+
+//routes
+app.use('/api/todos', todos)
 
 const port = process.env.PORT || 8000
 
