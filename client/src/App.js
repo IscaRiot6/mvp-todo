@@ -1,9 +1,10 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App () {
   return (
     <div className='App'>
-      <h1>wassup</h1>
+      <h1>To hell with your clan</h1>
     </div>
   )
 }
