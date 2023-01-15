@@ -1,10 +1,11 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import TodoNavbar from './components/TodoNavbar'
 
 function App () {
   return (
     <div className='App'>
-      <h1>To hell with your clan</h1>
+      <TodoNavbar />
     </div>
   )
 }
