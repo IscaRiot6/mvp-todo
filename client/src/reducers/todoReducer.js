@@ -6,7 +6,7 @@ const initialState = {
   todos: [
     { id: uuid(), todo: 'get set' },
     { id: uuid(), todo: 'coffee' },
-    { id: uuid(), todo: 'get anxious again' }
+    { id: uuid(), todo: 'get anxious' }
   ]
 }
 
@@ -16,6 +16,13 @@ export default function (state = initialState, action) {
       return {
         ...state
       }
+
+    case ADD_TODO:
+      return {
+        ...state,
+        todos: [action.payload, ...state.todos]
+      }
+
     case DELETE_TODO:
       return {
         ...state,
