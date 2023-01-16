@@ -1,12 +1,19 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import TodoNavbar from './components/TodoNavbar'
+import TodoList from './components/TodoList'
+
+import { Provider } from 'react-redux'
+import store from './store'
 
 function App () {
   return (
-    <div className='App'>
-      <TodoNavbar />
-    </div>
+    <Provider store={store}>
+      <div className='App'>
+        <TodoNavbar />
+        <TodoList />
+      </div>
+    </Provider>
   )
 }
 

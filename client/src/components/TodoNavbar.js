@@ -17,7 +17,7 @@ function TodoNavbar (args) {
 
   return (
     <div>
-      <Navbar className='my-2' color='dark' dark {...args}>
+      <Navbar className='my-2' color='secondary' dark {...args}>
         <NavbarBrand href='/'>TodoList</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -39,5 +39,3 @@ function TodoNavbar (args) {
 }
 
 export default TodoNavbar
-
-// color='light' light expand='sm' className='mt-5'
